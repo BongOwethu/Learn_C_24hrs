@@ -1,4 +1,4 @@
-#**Teach Yourself C in 24 Hours by Tony Zhang**
+# **Teach Yourself C in 24 Hours by Tony Zhang**
 
 *If one learns from others but does not think, one will be bewildered;*
 *If one thinks but does not learn from others, one will be in peril.*
