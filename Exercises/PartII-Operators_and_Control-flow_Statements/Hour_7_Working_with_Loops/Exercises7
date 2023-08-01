@@ -1,0 +1,93 @@
+# **Exercises**
+
+1. What is the difference between the following two pieces of code?
+for (i=0, j=1; i<8; i++, j++)
+printf(“%d + %d = %d\n”, i, j, i+j);
+
+for (i=0, j=1; i<8; i++, j++);
+printf(“%d + %d = %d\n”, i, j, i+j);
+*Answer*
+There is a semicolon on the for loppof the second statement. 
+
+2. Write a program that contains the two pieces of code shown in Exercise 1, and then execute the program. What are you going to see on the screen?
+*Answer*
+**the first one:**
+#include <stdio.h>
+main()
+{
+    int i,j;
+    for (i=0, j=1; i<8; i++, j++)
+        printf("%d + %d = %d\n", i, j, i+j);
+    return 0;
+}
+OUTPUT
+0 + 1 = 1
+1 + 2 = 3
+2 + 3 = 5
+3 + 4 = 7
+4 + 5 = 9
+5 + 6 = 11
+6 + 7 = 13
+7 + 8 = 15
+
+**The second one:**
+#include <stdio.h>
+main()
+{
+    int i,j;
+    for (i=0, j=1; i<8; i++, j++);
+        printf("%d + %d = %d\n", i, j, i+j);
+    return 0;
+}
+
+OUTPUT
+8 + 9 = 17
+
+
+
+3. Rewrite the program in Listing 7.1. This time, you want the while statement to keep looping until the user enters the character K.
+*Answer*
+main()
+{
+    int c;
+    c = ' ';
+    printf("Enter a character:\n(enter K to exit)\n");
+    while (c != 'K') {
+        c = getc(stdin);
+        putchar(c);
+    }
+    printf("\nOut of the while loop. Bye!\n");
+    return 0;
+}
+
+4. Rewrite the program shown in Listing 7.2 by replacing the do-while loop with a for loop.
+*Answer*
+#include <stdio.h>
+main()
+{
+    int i;
+
+    for (i=65;i<72;i++)
+        printf("The numeric value of %c is %d.\n", i, i);
+
+    return 0;
+}
+
+5. Rewrite the program in Listing 7.6. This time, use a while loop as the outer loop, and a do-while loop as the inner loop.
+*Answer*
+
+{
+int i, j;
+i = 1;
+while (i<=3) { /* outer loop */
+printf(“The start of iteration %d of the outer loop.\n”, i);
+j = 1;
+do{ /* inner loop */
+printf(“ Iteration %d of the inner loop.\n”, j);
+j++;
+} while (j<=4);
+i++;
+printf(“The end of iteration %d of the outer loop.\n”, i);
+}
+return 0;
+}

@@ -1,0 +1,108 @@
+# **Loops**
+## The while Loop
+- while a given condition is true. When the condition of the while loop is no longer logically true, the loop terminates and program execution resumes at the next statement following the loop.
+
+The general form of the while statement is
+while (expression)
+statement;
+
+Here expression is the condition of the while statement. This expressionis evaluatedfirst. If the expression evaluates to a nonzero value, then statement is executed. After that, expression is evaluated once again. The statement is then executed one more time if the expression still evaluates to a nonzero value. This process is repeated over and over until expression evaluates to zero, or logical false.
+
+The idea is that the code inside the loop, (statement; above) will eventually cause expression to be logically false the next time it is evaluated, thus terminating the loop.
+
+Of course, you often want to use a while keyword to control looping ove several statements. When this is the case, use a statement block surrounded by braces { and }. Each time the while expression is evaluated, the entire statement block will be executed if the expression evaluates as true.
+
+## The do-while Loop
+In the while statement that we’ve seen, the conditional expression is set at the very top of the loop. However, in this section, you’re going to see another statement used for looping, do-while, which puts the expression at the bottom of the loop. In this way, the statements in the loop are guaranteed to be executed at least once before the expression is tested. Note that statements in a while loop are not executed at all if the conditional expression evaluates to zero the first time through.
+
+-The general form for the do-while statement is
+*do {
+statement1;
+statement2;
+.
+.
+.
+} while (expression);*
+
+Here, the statements inside the statement block are executed once, and then expression is evaluated in order to determine whether the looping is to continue. If the expression evaluates to a nonzero value, the do-while loop continues; otherwise, the looping stops and execution proceeds to the next statement following the loop.
+
+## Looping Under the for Statement
+The general form of the for statement is
+*for (expression1; expression2; expression3) {
+statement;
+}
+or
+for (expression1; expression2; expression3) {
+statement1;
+statement2;
+.
+.
+.
+}*
+
+You see from this example that the for statement uses three expressions (expression1,expression2, and expression3) that are separated by semicolons.
+A for loop can control just one statement as in the first example, or several statements, such as statement1 and statement2, placed within the braces ({ and }).
+
+The first time the for statement is executed, it first evaluates expression1, which is typically used to initialize one or more variables.
+
+The second expression, expression2, acts in the same way as the conditional expression of a do or do-while loop. This second expression is evaluated immediately after expression1, and then later is evaluated again after each successful looping by the for statement. If expression2 evaluates to a nonzero (logical true) value, the statements within the braces are executed. Otherwise the looping is stopped and the execution resumes at the next statement after the loop.
+
+The third expression in the for statement, expression3, is not evaluated when the for statement is first encountered. However, expression3 is evaluated after each looping and before the statement goes back to test expression2 again.
+
+## The Null Statement
+As you may notice, the for statement does not end with a semicolon. The for statement has within it either a statement block that ends with the closing brace (}), or a single statement that ends with a semicolon. The following for statement contains a single statement:
+
+*for (i=0; i<8; i++)
+sum += i;*
+
+Note that the braces ({ and }) are discarded because the for statement only contains one statement.
+
+Now let us consider a statement like this:
+
+*for (i=0; i<8; i++);*
+
+Here the for statement is followed by a semicolon immediately.
+In the C language, there is a special statement called the null statement. A null statement contains nothing but a semicolon. In other words, a null statement is a statement with no expression.
+
+Therefore, when you review the statement for (i=0; i<8; i++);, you can see that it is actually a for statement with a null statement. In other words, you can rewrite it as
+
+*for (i=0; i<8; i++)
+;*
+
+Because the null statement has no expression, the for statement actually does nothing but loop.
+
+Just remember that the do-while loop is the only looping statement that uses a semicolon immediately after it as part of its syntax. The while and for statements are followed immediately by a loop, which could be a single statement followed by a semicolon, a statement block which has no semicolon afterwards, or just a semicolon (null statement) by itself.
+
+## Using Complex Expressions in a for Statement
+The C language allows you to use the comma operator to combine multiple expressions into the three parts of the for statement.
+
+For instance, the following form is valid in C:
+
+*for (i=0, j=10; i!=j; i++, j--){
+/* statement block */
+}*
+
+Here, in the first expression, the two integer variables i and j are initialized, respectively, with 0 and 10 when the for statement is first encountered. Then, in the second field, the relational expressions i!=j is evaluated and tested. If it evaluates to zero (false), the loop is terminated. After each iteration of the loop, i is increased by 1 and j is reduced by 1 in the third expression. Then the expression i!=j is evaluated to determine whether or not to execute the loop again.
+
+## Using Nested Loops
+
+- It’s often necessary to create a loop even when you are already in a loop. You can put a loop (an inner loop) inside another one (an outer loop) to make nested loops. When the program reaches an inner loop, it will run just like any other statement inside the outer loop.
+
+***Tip:***
+- Don’t confuse the two relational operators (< and <=) and misuse them in the expressions of loops.
+For instance, the following
+*for (j=1; j<10; j++){
+/* statement block */
+}*
+
+means if j is less than 10, keep looping. Thus, the total number of iterations is 9.
+
+However, in the following example,
+*for (j=1; j<=10; j++){
+/* statement block */
+}*
+
+the total number of iterations is 10 because the relational expression j<=10
+is evaluated in this case. Note that the expression evaluates to 1 (logical true) as long as j is less than or equal to 10.
+
+Therefore, you see the difference between the operators < and <= causes the looping in the first example to be one iteration shorter than the looping in the second example.

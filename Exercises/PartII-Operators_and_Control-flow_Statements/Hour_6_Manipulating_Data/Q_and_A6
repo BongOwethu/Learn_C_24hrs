@@ -1,0 +1,12 @@
+*Q:* What is the difference between the pre-increment operator and the post-increment operator?
+*A:* The pre-increment operator increases the operand’s value by 1 first, and then yields the modified value. On the other hand, the post-increment operator yields the original value of its operand first, then increments the operand. For instance, given x = 1, the ++x expression yields 2, whereas the expression x++ evaluates to 1 before actually modifying x.
+
+*Q:* Is the unary minus operator (-) the same as the subtraction operator (-)?
+*A:* No, they are not the same, although the two operators share the same symbol. The meaning of the symbol is determined by the context in which it appears. The unary
+minus operator is used to change the sign of a numeric value. In other words, the unary minus operator yields the negation of the value. The subtraction operator is an arithmetic operator that performs a subtraction between its two operands.
+
+*Q:* Which one has a higher precedence, a relational operator or an arithmetic operator?
+*A:* An arithmetic operator has a higher precedence than a relational operator. For instance, in the expression x * y + z > x + y,the operator precedence from highest to lowest goes from * to + and finally >. The entire expression is therefore interpreted as ((x * y) + z) > (x + y).
+
+*Q:* What value is yielded by a relational expression?
+*A:* A relational expression evaluates to either 0 or 1. If the relation indicated bly a relational operator in an expression is true, the expression evaluates to 1; otherwise, the expression evaluates to 0.

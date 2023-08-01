@@ -1,0 +1,19 @@
+*Q:* Why do characters have their unique numeric values?
+*A:* Characters are stored in computers in the form of bits. The combinations of bits can be used to represent different numeric values. A character has to have a unique numeric value in order to distinguish itself. Many computer systems support the ASCII character set, which contains a set of unique numeric values for up to 256 characters.
+Please note that your computer may use a different character set than the ASCII character set. Then, all characters used by the C language except the null character may have different numeric values from the values represented by the ASCII character
+set.
+
+*Q:* How can you declare two character variables?
+*A:* There are two ways to do the declaration. The first one is
+...char variable-name1, variable-name2;
+The second one is
+char variable-name1;
+char variable-name2;
+
+*Q:* What are %c, %d, and %f?
+*A:* These are format specifiers. %c is used to obtain the character format; %d is for the integer format; %f is for the floating-point format. %c, %d, and %f are often used
+with C functions such as printf().
+
+*Q:* What are the main differences between the int data type (integer) and the float data type (floating-point)?
+*A:* First, an integer does not contain any fraction parts, but a floating-point number does. A floating-point number must have a decimal point. In C, the float data type takes more bits than the int data type. In other words, the float data type has a larger range of numeric values than the int data type.
+Also, the integer division truncates the fraction part. For instance, the integer division of 16/10 produces a result of 1, not 1.6.

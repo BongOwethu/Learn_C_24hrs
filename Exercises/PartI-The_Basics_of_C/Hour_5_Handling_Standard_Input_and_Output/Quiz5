@@ -1,0 +1,7 @@
+# **Quiz**
+
+1. Can you align your output at the left edge, rather than the right edge, of the output field? YES by using the - on width specifier
+2. What is the difference between putc() and putchar()? 
+with putc() you have to include the stdout and putch() on its own has the stdout file
+3. What does getchar() return? It returns the first character inputted by keyboard.
+4. Within %10.3f, which part is the minimum field width specifier, and which one is the precision specifier? .3f is the precision specifer

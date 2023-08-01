@@ -1,0 +1,23 @@
+# **Quiz**
+1. What do the (x=1) && (y=10) and (x=1) & (y=10) expressions yield, respectively?
+*Answer*
+
+
+2. Given x = 96, y = 1, and z = 69, to what does the expression !y ? x == z : y evaluate?
+*Answer*
+
+
+3. If you have two int variables x and y, with x set to the binary value
+0011000000111001 and y set to the binary value 1100111111000110, what values are yielded by the two expressions ~x and ~y?
+*Answer*
+
+
+4. Given x=9, what does (x%2==0)||(x%3==0) yield? How about
+(x%2==0)&&(x%3==0)?
+*Answer*
+
+
+5. Is 8 >> 3 equivalent to 8 / 23? How about 1 << 3?
+*Answer*
+
+

@@ -1,0 +1,76 @@
+# **Exercises**
+1. Write a program to put the characters B, y, and e together on the screen.
+*Answer*
+#include <stdio.h>
+main()
+{
+    char c1,c2,c3;
+
+    c1 = 'B';
+    c2 = 'y';
+    c3 = 'e';
+
+    printf("%c%c%c\n", c1,c2,c3);
+    return 0;
+
+}
+
+2. Display the two numbers 123 and 123.456 and align them at the left edge of the field.
+*Answer*
+#include <stdio.h>
+main()
+{
+    int num1;
+	double num2;
+
+    num1=123;
+    num2= 123.456;
+
+    printf("x: %-3d \n",num1);
+    printf("y: %-6.3d \n",num2);
+    return 0;
+
+}
+
+3. Given three integers, 15, 150, and 1500, write a program that prints the integers on the screen in the hex format.
+*Answer*
+#include <stdio.h>
+int main()
+{
+    int num1,num2,num3;
+    num1=15;
+    num2= 150;
+    num3=1500;
+
+    printf(" Hex format: 15 is 0x%04x   150 is 0x%04x    1500 is 0x%04x \n", num1,num2,num3);
+
+    return 0;
+
+}
+
+4. Write a program that uses getchar() and putchar() to read in a character entered by the user and write the character to the screen.
+*Answer*
+#include <stdio.h>
+int main()
+{
+    printf("Please type in a characters:\n");
+    char a;
+    a = getchar();
+
+    printf("The character you entered is: %c\n",a);
+
+    putchar(a);
+    return 0;
+
+}
+
+5. If you compile the following C program, what warning or error messages will you get?
+main()
+{
+int ch;
+ch = getchar();
+putchar(ch);
+return 0;
+}
+*Answer*
+ You have not included your stdio.h/ standard input output header file

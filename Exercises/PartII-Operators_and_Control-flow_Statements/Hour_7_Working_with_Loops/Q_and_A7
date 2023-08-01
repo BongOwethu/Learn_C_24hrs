@@ -1,0 +1,14 @@
+# Q&A
+*Q:* What is the difference between the while and do-while statements?
+*A:* The main difference is that in the while statement, the conditional expression is evaluated at the top of the loop, while in the do-while statement, the conditional expression is evaluated at the bottom of the loop. Therefore, the state ents controlled by the do-while statement are guaranteed to be executed at least once whereas the loop in a while statement may never be executed at all.
+
+*Q:* How does a for loop work?
+*A:* There are three expressions in the for statement. The first field contains an initializer that is evaluated first and only once before the iteration. The second expression the conditional expression that must evaluate to nonzero (logical true) before the statements controlled by the for statement are executed. If the conditional expression evaluates to a nonzero (true) value, which means the specified condition
+is met, one iteration of the for loop is carried out. After each iteration, the third expression is evaluated, and then the second field is evaluated again. This process with the second and third expressions is repeated until the conditional expression evaluates to zero (logical false).
+
+*Q:* Can the while statement end with a semicolon?
+*A:* By definition, the while statement does not end with a semicolon. However, it’s legal in C to put a semicolon right after the while statement like this:
+while(expression);, which means there is a null statement controlled by the while statement. Remember that the result will be quite different from what you expect if you accidentally put a semicolon at the end of the while statement.
+
+*Q:* If two loops are nested together, which one must finish first, the inner loop or the outer loop?
+*A:* The inner must finish first. Then the outer loop will continue until the end, and then start another iteration if its specified condition is still met.

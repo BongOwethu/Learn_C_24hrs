@@ -1,0 +1,8 @@
+*Q:* What is the difference between a constant and a variable?
+*A:* The major difference is that the value of a constant cannot be changed, whereas the value of a variable can. You can assign different values to a variable whenever it’s necessary in your C program.
+*Q:* Why do you need a statement block?
+*A:* Many C keywords can only control one statement. A statement block provides a way to put more than one statement together, and put the statement block under the control of a C keyword. Then, the statement block is treated as a single statement.
+*Q:* Which arithmetic operators have a higher precedence?
+*A:* Among the five arithmetic operators, the multiplication, division, and remainder operators have a higher precedence than the addition and subtraction operators.
+*Q:* How many parts does a function normally have?
+*A:* A function normally has six parts: the function type, the function name, the arguments, the opening brace, the function body, and the closing brace.

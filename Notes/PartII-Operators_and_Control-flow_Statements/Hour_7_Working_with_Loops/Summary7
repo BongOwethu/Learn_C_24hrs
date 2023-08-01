@@ -1,0 +1,13 @@
+# **Summary**
+In this lesson you learned the following important concepts and statements:
+• Looping can be used to perform the same set of statements over and over until specified conditions are met.
+• Looping makes your program more concise.
+• There are three statements, while, and do-while, and for, that are used for looping in C.
+• The while statement contains one expression, which is the conditional expression which controls the loop.
+• The while statement does not end with a semicolon.
+• The do-while statement places its conditional expression at the bottom of the loop.
+• The do-while statement ends with a semicolon.
+• There are three expressions in the for statement. The second expression is the conditional expression.
+• The for statement does not end with a semicolon.
+• Multiple expressions, combined via commas, can be used as one expression in the for statement.
+• In a nested loop, inner loop finishes before the outer loop resumes its iteration in nested loops.

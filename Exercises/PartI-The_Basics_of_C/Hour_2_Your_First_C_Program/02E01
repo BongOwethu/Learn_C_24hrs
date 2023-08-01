@@ -1,0 +1,3 @@
+*Q:* Is #include <stdio.h> the same as #include “stdio.h”?
+*A:* No, they are not the same. The #inclue  is a standard library for C with the standard input and output header file.
+ 

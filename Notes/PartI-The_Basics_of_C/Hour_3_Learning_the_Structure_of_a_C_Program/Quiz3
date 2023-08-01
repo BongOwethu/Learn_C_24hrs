@@ -1,0 +1,11 @@
+1. In the C language, is 74 a constant? How about 571? YES
+2. Is x = 570 + 1 an expression? How about x = 12 + y? YES
+3. Are the following function names valid? _turbo_add
+2methods
+m2_algorithm
+*start_function
+Room_Size
+.End_Exe
+_turbo_add
+4. Is 2 + 5 * 2 equal to (2 + 5) * 2? NO
+5. Does 7 % 2 produce the same result as 4 % 3? YES

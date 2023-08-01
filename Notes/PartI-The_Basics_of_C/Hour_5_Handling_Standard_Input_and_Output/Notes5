@@ -1,0 +1,80 @@
+# **Understanding Standard I/O
+- A file contains related characters and numbers. Because all characters and numbers are represented in bits on computers, and a byte is a series of bits, the C language treats a file as a series of bytes. A series of bytes is also called a stream. In fact, the C language treats all file streams equally, although some of the file streams may come from a disk or tape drive, from a terminal, or even from a printer.
+
+Additionally, in C, there are three file streams that are pre-opened for you — that is to say, they are always available for use in your programs:
+• stdin—The standard input for reading.
+• stdout—The standard output for writing.
+• stderr—The standard error for writing error messages.
+
+Usually, the standard input (stdin) file stream links to your keyboard, while the standard output (stdout) and the standard error (stderr) file streams point to your terminal screen. Also, many operating systems allow the user to redirect these file streams.
+
+In fact, you’ve already used stdout. When you called the printf() function in the last lesson, you were actually sending the output to the default file stream, stdout, which points to your screen.
+
+*Tip*
+- The C language provides many functions to manipulate file reading and
+writing (I/O). The header file stdio.h contains the declarations for those functions. Therefore, always include the header file stdio.h in your C program before doing anything with file I/O.
+
+
+## Getting Input from the User
+- These days, typing on the keyboard is still the de facto standard way to input information into computers. The C language has several functions to tell the computer to read input from the user (typically through the keyboard.) In this lesson the getc() and getchar() functions are introduced.
+
+### Using the getc() Function
+The getc() function reads the next character from a file stream, and returns the character
+as an integer.
+
+### Using the getchar() Function
+- The C language provides another function, getchar(), that performs a similar function to getc(). 
+More precisely, the getchar() function is equivalent to getc(stdin).
+
+## Printing Output on the Screen
+Besides getc() and getchar() for reading, the C language also provides two functions,putc() and putchar(), for writing. The following two sections introduce these functions.
+
+### Using the putc() Function
+The putc() function writes a character to the specified file stream, which, in your case, is the standard output pointing to your screen.
+
+### Another Function for Writing: putchar()
+- Like putc(), putchar() can also be used to put a character on the screen. 
+The only difference between the two functions is that putchar() needs only one argument to contain the character. You don’t need to specify the file stream because the standard output (stdout) is set as the file stream to putchar().
+
+The following are all the format specifiers that can be used in printf():
+%c | The character format specifier.
+%d | The integer format specifier.
+%i | The integer format specifier (same as %d).
+%f | The floating-point format specifier.
+%e | The scientific notation format specifier (note the lowercase e).
+%E | The scientific notation format specifier (note the uppercase E).
+%g | Uses %f or %e, whichever result is shorter.
+%G | Uses %f or %E, whichever result is shorter.
+%o | The unsigned octal format specifier.
+%s | The string format specifier.
+%u | The unsigned integer format specifier.
+%x | The unsigned hexadecimal format specifier (note the lowercase x).
+%X | The unsigned hexadecimal format specifier (note the uppercase X).
+%p | Displays the corresponding argument that is a pointer.
+%n | Records the number of characters written so far.
+%% | Outputs a percent sign (%).
+
+### Converting to Hex Numbers
+- The solution to this problem is hexadecimal notation (or hex), which is a kind of shorthandto represent binary numbers. Hex is a compromise between the computer-readable base-2 (or binary) number system, and our more familiar base-10 (or decimal) system. Converting numbers from hex to decimal (or from binary to hex) and back is far easier (not to mention quicker) than converting directly from binary to decimal or vice-versa.
+
+The difference between a decimal number and a hexadecimal number is that the hexadecimal is a base-16 numbering system. A hexadecimal number can be represented by four bits. (2^4] is equal to 16, which means four bits can produce 16 unique numbers.)
+
+The hexadecimal numbers 0 through 9 use the same numeric symbols found in the decimal numbers 0 through 9. A, B, C, D, E, and F are used to represent, respectively, the numbers 10 through 15 in uppercase. (Similarly, in lowercase, a, b, c, d, e, and f are used to represent these hex numbers. Uppercase and lowercase hex are interchangeable and really just a matter of style.)
+
+### Specifying the Minimum Field Width
+The C language allows you to add an integer between the percent sign (%) and the letter in a format specifier. The integer is called the minimum field width specifier because it specifies the minimum field width and ensures that the output reaches the minimum width. For example, in %10f, 10 is a minimum field width specifier that ensures that the output is at least 10 character spaces wide. This is especially useful when printing out a column of numbers.
+
+If you want a certian with number you specify the number you want.
+
+### Aligning Output
+As you might have noticed in the previous section, all output is right-justified. In other words, by default, all output is placed on the right edge of the field, as long as the field width is longer than the width of the output.
+
+You can change this and force output to be left-justifiedwill move the letters or numbers to the left. To do so, you need to prefix the minimum field specifier with the minus sign (-). For example, %-12d specifies the minimum field width as 12, and justifies the output from the left edge of the field.
+
+### Using the Precision Specifier
+You can put a period . and an integer right after the minimum field width specifier. The combination of the period (.) and the integer makes up a precision specifier. You can use the precision specifier to determine the number of decimal places for floating-point numbers, or to specify the maximum field width (or length) for integers or strings. (Strings in C are introduced in Hour 13, “Manipulating Strings.”)
+
+For instance, with %10.3f, the minimum field width length is specified as 10 characters long, and the number of decimal places is set to 3. (Remember, the default number of decimal places is 6.) For integers, %3.8d indicates that the minimum field width is 3, and the maximum field width is 8.
+
+
+

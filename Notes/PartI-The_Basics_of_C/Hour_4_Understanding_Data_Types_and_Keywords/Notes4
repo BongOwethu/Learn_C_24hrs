@@ -1,0 +1,198 @@
+# **C Keywords**
+
+The C language reserves certain words that have special meanings to the language. Those reserved words are sometimes called C keywords. You should not use the C keywords for your own variable, constant, or function names in your programs. Table 4.1 lists the 32 reserved C keywords.
+TABLE 4.1 Reserved Keywords in C
+Keyword | Description
+auto Storage | class specifier
+break | Statement
+case |Statement
+char | Type specifier
+const | Storage class modifier
+continue |Statement
+default | Label
+do | Statement
+double | Type specifier
+else | Statement
+enum | Type specifier
+extern |Storage class specifier
+float | Type specifier
+for | Statement
+goto | Statement
+if | Statement
+int | Type specifier
+long | Type specifier
+register | Storage class specifier
+return | Statement
+short | Type specifier
+signed | Type specifier
+sizeof | Operator
+static | Storage class specifier
+struct | Type specifier
+switch |Statement
+typedef | Statement
+union | Type specifier
+unsigned | Type specifier
+void | Type specifier
+volatile | Storage class modifier
+while | Statement
+
+- Don’t worry if you can’t remember all the C keywords the first time through. In the rest of the book, you’ll become more familiar with them and start to use many of the keywords through examples and exercises.
+Note that all C keywords are written in lowercase letters. As I’ve mentioned, C is a casesensitive language. Therefore, int, as shown in the list here, is considered as a C keyword, but INT is not.
+
+## The char Data Type
+An object of the char data type represents a single character of the character set used by your computer. For example, A is a character, and so is a. But 7 is a number.
+However, a computer can only store numeric code. Therefore, characters such as A, a, B, b, and so on all have a unique numeric code that is used by computers to represent the characters. Usually, a character takes 8 bits (that is, 1 byte) to store its numeric code.
+For many computers, the ASCII codes are the de facto standard codes to represent a character set. (ASCII, just for your information, stands for American Standard Code for Information Interchange.) The original ASCII character set has only 128 characters because it uses the lower 7 bits that can represent 27 (that is, 128) characters.
+On IBM-compatible PCs, however, the character set is extended to contain a total of 256 (that is, 28) characters.
+
+## Character Variables
+- A variable that can represent different characters is called a character variable.
+
+You can set the data type of a variable to char by using the following declaration format:
+
+char variablename;
+
+where variablename is the name you provide in which to store values of this type.
+
+If you have more than one variable to declare, you can either use the following format:
+char variablename1;
+char variablename2;
+char variablename3;
+
+or this one:
+
+char variablename1, variablename2, variablename3;
+
+For example, the following statement declares MyCharacter and sets it to ‘A’:
+char MyCharacter = ‘A’;
+
+Similarly, the following statements declare x, y, and z as character variables and then
+assign values to them:
+char x, y, z;
+x = ‘A’;
+y = ‘f’;
+z = ‘7’;
+Note the last assignment, z = ‘7’, sets z to equal the numeric value representing the character ‘7’ in the character set — not the actual number 7.
+
+## Character Constants
+
+- A character enclosed in single quotes (‘) is called a character constant. For instance, ‘A’, ‘a’, ‘B’, and ‘b’, are all character constants that have their unique numeric values in a given character set. For instance, you may see the unique numeric values from the ASCII character set.
+
+It is important to remember that character constants are always surrounded by single quote characters (‘) while a string of more than one character uses the double quote (“).
+
+If this sounds confusing, just remember that single quotes go with single characters. You saw an example of double quotes and character strings with the printf() function calls in the previous hour.
+From the ASCII character set, you will find that the unique numeric (decimal) values of ‘A’, ‘a’, ‘B’, and ‘b’ are 65, 97, 66, and 98, respectively. Therefore, given x as a character
+variable, and given the ASCII character set, for instance, the following two assignment
+statements are equivalent:
+x = ‘A’;
+x = 65;
+So are the following two statements:
+x = ‘a’;
+x = 97;
+
+## The Escape Character (\)
+Actually, you first saw the escape character (\) in Hour 2, “Your First C Program,” when you learned to use the newline character (\n) to break a message into two pieces.
+Therefore, the backslash (\) is called the escape character in the ASCII character set.
+The escape character is used in the C language to tell the computer that a special character
+follows.
+
+For instance, when the computer sees \ in the newline character \n, it knows that the
+next character, n, causes a sequence of a carriage return and a line feed.
+
+Character Description:
+\b | The backspace character; moves the cursor to the left one character.
+\f | The form-feed character; goes to the top of a new page.
+\r 
+| The return character; returns to the beginning of the current line.
+\t | The tab character; advances to the next tab stop.
+
+## The int Data Type
+- Integer numbers are also called whole numbers, which have no
+fractional part or decimal point. Therefore, the result of an integer division is truncated, simply because any fraction part is ignored.
+
+### Declaring Integer Variables
+The following shows the basic declaration format:
+
+int variablename;
+
+Similar to the character declaration, if you have more than one variable to declare, you can either use the format like this:
+
+int variablename1;
+int variablename2;
+int variablename3;
+
+or like this:
+
+int variablename1, variablename2, variablename3;
+
+Here variablename1, variablename2, and variablename3 indicate the places where you put the names of int variables.
+
+For example, the following statement declares MyInteger as an integer variable and
+assigns it a value:
+int MyInteger = 2314;
+
+Similarly, the following statement declares A, a, B, and b as integer variables:
+int A, a, B, b;
+A = 37;
+a = –37;
+B = -2418;
+b = 12 ;
+
+# The float Data Type
+- The floating-point number is another data type in the C language. Unlike an integer number, a floating-point number contains a decimal point. For instance, 7.01 is a floatingpoint number; so are 5.71 and –3.14. A floating-point number is also called a *real number*.
+
+A floating-point number is specified by the float keyword in the C language. Floatingpointer constants can be suffixed with f or F to specify float. A floating-pointer number without a suffix is double by default. The double data type is introduced later in this lesson.
+
+Like an integer number, a floating-point number has a limited range. The ANSI standard requires that the range be at least plus or minus 1.0 × 1037. In most cases, a floating-point number is represented by taking 32 bits. Therefore, a floating-point number in C is of at least six digits of precision. That is, for a floating-point number, there are at least six digits (or decimal places) on the right side of the decimal point.
+Unlike an integer division from which the result is truncated and the fraction is discarded,a floating-point division produces another floating-point number. A floating-point division is carried out if both the divisor and the dividend, or one of them, are floating-point numbers.
+
+For instance, 571.2 / 10.0 produces another floating-point number, 57.12. So do 571.2 / 10 and 5712 / 10.0.
+
+## Declaring Floating-Point Variables
+The following shows the declaration format for a floating-point variable:
+float variablename;
+
+Similar to the character or integer declaration, if you have more than one variable to declare, you can either use the format like this:
+
+float variablename1;
+float variablename2;
+float variablename3;
+
+or like the following one:
+
+float variablename1, variablename2, variablename3;
+
+For example, the following statement declares myFloat as a float variable and assigns it a
+value:
+float myFloat = 3.14;
+
+Similarly, the following statement declares a, b, and c as float variables:
+float a, b, c;
+a = 10.38;
+b = –32.7;
+c = 12.0f;
+
+## The double Data Type
+- In the C language, a floating-point number can also be represented by another data type, called the double data type. In other words, you can specify a variable by the double keyword, and assign the variable a floating-point number.
+
+The difference between a double data type and a float data type is that the former uses twice as many bits as the latter. Therefore, a double floating-point number is of at least 10 digits of precision, although the ANSI standard does not specify it for the double data
+type. 
+
+##Using Scientific Notation
+The C language uses scientific notation to help you write lengthy floating-point numbers.
+In scientific notation, a number can be represented by the combination of the mantissa and the exponent. The format of the notation is that the mantissa is followed by the exponent,
+which is prefixed by e or E. Here are two examples:
+
+mantissaeexponent
+
+and
+
+mantissaEexponent
+
+Please note that mantissa and exponent above are both placeholders and you need to replace them with numerical values.
+
+For instance, 5000 can be represented by 5e3 in scientific notation. Likewise, -300 can be represented by -3e2, and 0.0025 by 2.5e-3.
+
+Correspondingly, the format specifier, %e or %E, is used to format a floating-point numberin scientific notation. The usage of %e or %E in the printf() function is the same as %f.
+
+

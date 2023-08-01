@@ -1,0 +1,12 @@
+*Q:* What is the lowest-level language in the computer world?
+*A:* The computer’s machine language is the lowest because the machine language, made up of 0s and 1s, is the only language that the computer can understand directly.
+
+*Q:* What are the advantages of high-level programming languages?
+*A:* Readability, maintainability, and portability are the main advantages of high-level programming languages.
+
+*Q:* What is C, anyway?
+*A:* C is a general-purpose programming language. It’s a low-level language that has advantages such as readability, maintainability, and portability. Also, C allows youto get down to the hardware level to increase the performance speed if needed. A C compiler is needed to translate programs written in C into machine-understandable
+code. The portability of C is realized by recompiling the C programs with different C compilers intended for different types of computers.
+
+*Q:* Can I learn C in a short time?
+*A:* Yes. C is a small programming language. There are not many C keywords or commands to remember. Also, it’s very easy to read and write C programs because C is a high-level programming language that is close to human languages, especially English. You can learn C in a relatively short time.

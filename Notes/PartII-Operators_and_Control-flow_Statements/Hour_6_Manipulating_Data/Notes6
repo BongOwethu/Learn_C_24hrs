@@ -1,0 +1,96 @@
+# **Arithmetic Assignment Operators**
+Before jumping into the arithmetic assignment operators, let’s first take a closer look at the assignment operator itself.
+
+## The Assignment Operator (=)
+In the C language, the = operator is called an assignment operator, which you’ve seen and used for several hours.
+
+- The general statement form to use an assignment operator is left-hand-operand = right-hand-operand;
+
+Here the statement causes the value of the right-hand-operand to be assigned (or written) to the memory location of the left-hand-operand.
+Thus, after the assignment, left-hand-operand will be equal to the value of right-hand-operand. Additionally, the entire assignment expression evaluates to the same value that is assigned to the lefthand-operand.
+
+For example, the statement a = 5; writes the value of the right-hand operand (5) into the memory location of the integer variable a (which is the left-hand operand in this case).
+
+Similarly, the statement b = a = 5; assigns 5 to the integer variable a first, and then to the integer variable b. After the execution of the statement, both a and b contain the value of 5.
+
+***Tip***
+- Don’t confuse the assignment operator (=) with the relational operator, == (called the equal-to operator).
+
+## Combining Arithmetic Operators with =
+
+- The C language gives you a new operator, +=, to do the addition and the assignment
+together. Therefore, you can rewrite the statement x = x + y; as
+x += y;
+
+The combinations of the assignment operator (=) with the arithmetic operators, `+`, `-`, `*`, `/`, and `%`, give you another type of operators—arithmetic assignment operators:
+
+**Operator & Description**
++= Addition assignment operator
+-= Subtraction assignment operator
+*= Multiplication assignment operator
+/= Division assignment operator
+%= Remainder assignment operator
+
+The following shows the equivalence of statements:
+x += y; is equivalent to x = x + y;
+x -= y; is equivalent to x = x - y;
+x *= y; is equivalent to x = x * y;
+x /= y; is equivalent to x = x / y;
+x %= y; is equivalent to x = x % y;
+Note that the statement
+
+## Getting Negations of Numeric Values
+If you want to change the sign of a number, you can put the minus operator (-) right before the number. For instance, given an integer of 7, you can get its negative value by changing the sign of the integer like this: -7. Here, - is the minus operator.
+
+The - symbol used in this way is called the unary minus operator. This is because the operator takes only one operand: the expression to its immediate right. The data type of the operand can be any integer or floating-point number.
+
+You can apply the unary minus operator to an integer or a floating-point variable as well.
+For example, given x = 1.234, -x equals -1.234. Or, given x = -1.234, -x equals 1.234 since negating a negative value results in a positive number.
+
+## Incrementing or Decrementing by One
+-The increment and decrement operators are very handy to use when you want to add or subtract 1 from a variable. The symbol for the increment operator is ++. The decrement operator is --.
+
+For instance, you can rewrite the statement x = x + 1; as ++x;, or you can replace x =
+x - 1; with --x;.
+
+Actually, there are two versions of the increment and decrement operators. In the ++x; statement, where ++ appears before its operand, the increment operator is called the preincrement
+operator. This refers to the order in which things happen: the operator first adds 1 to x, and then yields the new value of x. Likewise, in the statement --x;, the predecrement operator first subtracts 1 from x and then yields the new value of x.
+
+If you have an expression like x++, where ++ appears after its operand, you’re using the post-increment operator. Similarly, in x--, the decrement operator is called the postdecrement operator.
+
+## Greater Than or Less Than?
+- There are six types of relations between two expressions: equal to, not equal to, greater than, less than, greater than or equal to, and less than or equal to. Accordingly, the C language provides these six relational operators:
+
+**Operator & Description**
+== Equal to
+!= Not equal to
+> Greater than
+< Less than
+>= Greater than or equal to
+<= Less than or equal to
+
+All the relational operators have lower precedence than the arithmetic operators.
+Therefore, all arithmetic operations on either side of a relational operator are carried out before any comparison is made. You should use parentheses to enclose operations of operators that have to be performed first.
+*NB* -> Among the six relational operators, the >, <, >=, and <= operators have higher precedence than the == and != operators.
+
+For example, the expression
+x * y < z + 3
+is interpreted as
+(x * y) < (z + 3)
+
+Another important point is that all relational expressions produce a result of either 0 or 1.
+In other words, a relational expression evaluates to 1 if the specified relationship holds.
+Otherwise, 0 is yielded.
+
+Given x = 3 and y = 5, for instance, the relational expression x < y gives a result of 1.
+
+## Using the Cast Operator
+- In C, you can convert the data type of a variable, expression, or constant to a different one by prefixing the cast operator. This conversion does not change the operand itself; when the cast operator is evaluated, it yields the same value (but represented as a different type), which you can then use in the rest of an expression.
+
+The general form of the cast operator is
+- (data-type) x
+
+Here data-type specifies the new data type you want. x is a variable (or constant or expression) of a different data type. You have to include the parentheses ( and ) around the new data type to make a cast operator.
+
+For example, the expression (float)5 converts the integer 5 to a floating-point number,5.0.
+

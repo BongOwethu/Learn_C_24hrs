@@ -1,0 +1,10 @@
+# **Summary**
+In this lesson you’ve learned the following important concepts, specifiers, and functions:
+• The C language treats a file as a series of bytes.
+• stdin, stdout, and stderr are three file streams that are pre-opened and always available for you to use.
+• The C library functions getc() and getchar() can be used to read in one character from the standard input.
+• The C library functions putc() and putchar() can be used to write one character to the standard output.
+• %x or %X can be used to convert decimal numbers to hex numbers.
+• A minimum field width can be specified and ensured by adding an integer into a format specifier.
+• An output can be aligned at either the left or right edge of the output field.
+• A precision specifier can be used to specify the decimal place number for floatingpoint numbers, or the maximum field width for integers or strings.

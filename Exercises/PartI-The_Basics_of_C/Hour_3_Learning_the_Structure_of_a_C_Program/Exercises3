@@ -1,0 +1,62 @@
+# **Exercises**
+
+1. Given two statements, x = 3; and y = 5 + x;, how can you build a statement block with the two statements?
+*Answer*
+int numbers( int x, int y)
+{
+int sumi
+x = 3; 
+y = 5;
+sum = x + y;
+return sum;
+}
+
+2. What is wrong with the following function?
+int 3integer_add( int x, int y, int z)
+{
+int sum;
+sum = x + y + z;
+return sum;
+}
+*Answer*
+There is a number infront of the function 3integer_add.
+
+3. What is wrong with the following function?
+int integer_add( int x, int y, int z)
+{
+int sum;
+sum = x + y + z
+return sum;
+}
+*Answer*
+There is no semicolon after the statement sum.
+
+4. Write a C function that can perform a multiplication of two integers and return the calculated result.
+*Answer*
+#include <stdio.h>
+ /* This function multiplies two integers and returns the result */
+int integer_mul( int x, int y )
+{
+    int result;
+    result = x * y;
+    return result;
+}
+
+5. Write a C program that calls the C function you just wrote in Exercise 4 to calculate the multiplication of 3 times 5 and then print out the return value fromthe function on the screen.
+*Answer*
+#include <stdio.h>
+ /* This function multiplies two integers and returns the result */
+int integer_mul( int x, int y )
+{
+    int result;
+    result = x * y;
+    return result;
+}
+
+int main()
+{
+    int product;
+    product = integer_mul(3, 5);
+    printf("The product is %d.\n", product);
+    return 0;
+}

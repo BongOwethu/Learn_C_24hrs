@@ -1,0 +1,18 @@
+# **Quiz**
+1. What is the difference between the = operator and the == operator? 
+*Answer*
+With = is is an assignment operator and with the == is a comparison operator. 
+
+2. In the expression x + - y - - z, which operator(s) are subtraction operators, and which one(s) are unary minus operator(s)?
+*Answer*
+In the x + - y - - z expression, the first and third minus signs are unary minus operators; the second minus sign is a subtraction operator.
+
+3. Given x = 15 and y = 4, what values do the expressions x / y and (float)x / y yield, respectively?
+*Answer*
+15/4 evaluates to 3. (float)15/4 evaluates to 3.750000
+
+4. Is the expression y *= x + 5 equivalent to the expression y = y * x + 5?
+*Answer*
+No. The y *= x + 5 expression is actually equal to the y = y * (x + 5) expression.
+
+

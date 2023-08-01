@@ -1,0 +1,12 @@
+1. Are the integer divisions of 134/100 and 17/10 equal? YES
+2. Is the result of 3000 + 1.0 a floating-point number? NO
+How about 3000/1.0? YES
+3. How can you represent the following numbers in scientific notation?
+• 3500 | 3.5e3
+• 0.0035 | 3.5e-3
+• –0.0035 | -3.5e-3
+4. Are the following variable names valid? _index
+• 7th_calculation
+• Tom’s_method
+• _index
+• Label_1

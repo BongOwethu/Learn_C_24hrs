@@ -1,0 +1,25 @@
+# **Exercises**
+
+1. Given x = 0xEFFF and y = 0x1000 (that is, EFFF and 1000 as hex values), what hex values do you get by evaluating ~x and ~y?
+*Answer*
+
+2. Taking the values of x and y assigned in Exercise 1, write a program that prints out the values of !x and !y by using both the %d and %u formats in the printf() function.
+*Answer*
+
+
+3. Given x = 123 and y = 4, write a program that displays the results of the expressions
+x << y and x >> y.
+*Answer*
+
+
+4. Write a program that shows the values (in hex) of the expressions 0xFFFF^0x8888,
+0xABCD & 0x4567, and 0xDCBA | 0x1234.
+*Answer*
+
+
+5. Use the ?: operator and the for statement to write a program that keeps taking the
+characters entered by the user until the character q is accounted. (Hint: Put x!=’q’
+? 1 : 0 expression as the second expression in a for statement.)
+*Answer*
+
+

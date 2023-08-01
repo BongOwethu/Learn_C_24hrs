@@ -1,0 +1,18 @@
+# What Is C?
+
+C is a programming language. The C language was first developed in 1972 by Dennis Ritchie at AT&T Bell Labs. Ritchie called his newly developed language C simply because there was a B programming language already. (As a matter of fact, the B language led to the development of C.) 
+
+C is a low-level programming language. In fact, C is one of the most popular generalpurpose programming languages.
+
+In the computer world, the further a programming language is from the computer architecture,the higher the language’s level. You can imagine that the lowest-level languages are machine languages that computers understand and execute directly. The high-level programming languages like Python, on the other hand, are closer to our human languages.
+
+High-level programming languages, including C, have the following advantages:
+• Readability: Programs are easy to read.
+• Maintainability: Programs are easy to maintain.
+• Portability: Programs are easy to port across different computer plat forms.
+
+Each high-level language needs a compiler or an interpreter to translat instructions written in the high-level programming language into a machine language that a computer can understand and execute. Different machines may need different compilers or interpreters for the same programming.
+
+## The ANSI C Standard
+
+The ANSI(American National Standards Institute) standard for C enhances the original K&R standard and defines agroup of commonly used C functions that known as the ANSI C standard library. In most cases, C compilers include the standard library, along with other libraries to provide some other compiler-specific functions.

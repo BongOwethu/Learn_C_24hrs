@@ -1,0 +1,35 @@
+# Quiz
+1. Can the following while loop print out anything?
+int k = 100;
+while (k<100){
+printf(“%c”, k);
+k++;
+}
+*Answer*
+NO. Because k =100 and when k<100 makes it equal to k
+
+2. Can the following do-while loop print out anything?
+int k = 100;
+do {
+printf(“%c”, k);
+k++;
+} while (k<100);
+*Answer*
+YES. The output is d.
+
+3. Do the following two for loops have the same number of iterations?
+for (j=0; j<8; j++);
+for (k=1; k<=8; k++);
+*Answer*
+YES.
+
+4. Is the following for loop
+for (j=65; j<72; j++) printf(“%c”, j);
+equivalent to the following while loop?
+int k = 65;
+while (k<72)
+printf(“%c”, k);
+k++;
+}
+*Answer*
+There are 2 warnings j is undeclared and while has a misleading indent

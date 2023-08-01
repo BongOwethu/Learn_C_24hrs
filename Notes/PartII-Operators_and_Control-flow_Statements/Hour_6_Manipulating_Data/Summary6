@@ -1,0 +1,9 @@
+# **Summary**
+In this lesson you learned about the following important operators:
+• The assignment operator =, which has two operands (one on each side). The value of the right-side operand is assigned to the operand on the left side. The operand on the left side must be some form of a variable which can accept the new value.
+• The arithmetic assignment operators +=, -=, *=, /=, and %=, which are combinations of the arithmetic operators with the assignment operator.
+• The unary minus operator (-), which evaluates to the negation of a numeric value.
+• The two versions of the increment operator, ++. You know that in ++x, the ++ operator is called the pre-increment operator; and in x++, ++ is the postincrement operator.
+• The two versions of decrement operator, --. You have learned that, for example, in --x, the -- operator is the pre-decrement operator, and in x--, -- is called the postdecrement operator.
+• The six relational operators in C: == (equal to), != (not equal to), > (greater than), < (less than), >= (greater than or equal to), and <= (less than or equal to).
+• How to change the data type of an expression by prefixing a cast operator to the data.

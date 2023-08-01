@@ -1,0 +1,9 @@
+# **Summary**
+
+In this lesson you learned the following very important logical and bit-manipulation operators in C:
+• The sizeof operator evaluates to the number of bytes that a specified data type has. You can use this operator to measure the size of a data type on your machine.
+• The logical AND operator (&&) yields 1 (logical true) only if both of its two operand expressions) evaluate to nonzero values. Otherwise, the operator yields 0.
+• The logical OR operator (||) yields 0 only if both of its two operands evaluate to 0. Otherwise, the operator yields 1.
+• The logical negation operator (!) yields 0 when its operand evaluates to nonzero, and yields 1 only if its operand evaluates to 0.
+• There are six bit-manipulation operators: the bitwise AND operator (&), the bitwise OR operator (|), the bitwise XOR operator (^), the bitwise complement operator ~), the right-shift operator (>>), and the left-shift operator (<<).
+• The conditional operator (?:) is the only operator in C that can take three operands.

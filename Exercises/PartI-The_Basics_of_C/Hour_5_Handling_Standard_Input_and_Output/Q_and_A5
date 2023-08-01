@@ -1,0 +1,12 @@
+*Q:* What are stdin, stdout, and stderr?
+*A:* In C, a file is treated as a series of bytes that is called file stream. stdin, stdout, and stderr are all pre-opened file streams. stdin is the standard input for reading; stdout is the standard output for writing; stderr is the standard error for outputting error messages.
+
+*Q:* How much is the hex number 32?
+*A:* Hexadecimal, or hex for short, is a base-16 numerical system. Therefore, 32 (hex) is equal to 3*161+2*160, or 50 in decimal.
+
+*Q:* Are getc(stdin) and getchar() equivalent?
+*A:* Because the getchar() function reads from the file stream stdin by default, getc(stdin) and getchar() are equivalent in this case.
+
+*Q:* In the function printf(“The integer %d is the same as the hex %x”, 12,
+12), what is the relation between the format specifiers and the expressions?
+*A:* The two format specifiers, %d and %x, specify the formats of numeric values contained in the expression section. Here the first numeric value of 12 is going to be printed out in integer format, while the second 12 (in the expression section) will be displayed in the hex format. Generally speaking, the number of format specifiers in the format section should match the number of expressions in the expression section.

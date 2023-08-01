@@ -1,0 +1,155 @@
+# **Using Conditional Operators**
+
+## Measuring Data Sizes
+- Depending on the operating system and the C compiler you’re using, the size of a data type varies. For example, on most UNIX workstations, an integer is 32 bits long, whereas most C compilers only support 16-bit integers on a DOS-based machine.
+
+So, how do you know the size of a data type on your machine? The answer is that you can measure the data type size by using the sizeof operator provided by C.
+
+The general form of the sizeof operator is
+*sizeof (expression)*
+
+Here expression is the data type or variable whose size is measured by the sizeof operator.
+
+The sizeof operator evaluates the size, in bytes, of its operand. The operand of the sizeof operator may be a C language keyword naming a data type (such as int, char, or float), or it may be an expression which refers to a data type whose size can be determined (such as a constant or the name of a variable).
+
+The parentheses are optional in the general form of the operator. If the expression is not a C keyword for a data type, the parentheses can be discarded. For instance, the following statement:
+
+*size = sizeof(int);*
+
+## Everything Is Logical
+Now, it’s time to learn about a new set of operators: logical operators.
+There are three logical operators in the C language:
+
+&& The logical AND operator
+|| The logical OR operator
+! The logical NEGATION operator
+
+The first two, the AND and OR operators, are binary operators; that is, they both take two operands (one to the left and one to the right of the operator). The logical AND operator (&&) is used to evaluate the truth or falsity of a pair of expressions. If either expression evaluates to 0 (that is, logically false), the operator yields a value of 0. Otherwise, if — and only if — both operand expressions evaluate to nonzero values, the logical AND operator yields a value of 1 (logically true).
+
+The logical OR operator (||) yields a value of 1 whenever one or both of the operand expressions evaluates to nonzero (logically true). The || operator yields 0 only if both operand expressions evaluate to 0 (false). The logical negation operator (!) is a unary operator; that is, it only takes one operand (the expression to its right). If the operand evaluates to any nonzero value, the ! operator yields 0 (logically false); only when the operand expression evaluates to 0, does the operator yield 1 (logically true).
+
+The following three sections contain examples that show you how to use the three logical
+operators.
+
+### The Logical AND Operator (&&)
+A general format of the logical AND operator is:
+*exp1 && exp2*
+
+where exp1 and exp2 are two operand expressions evaluated by the AND operator.
+
+A good way to understand the AND operator is to look at a table that shows the values yielded by the AND operator depending on the possible values of exp1 and exp2. See
+
+The Values Returned by the AND Operator
+exp1 | exp2 | && Yields
+nonzero| nonzero | 1
+nonzero |0 | 0
+	| nonzero | 0
+0 | 0| 0
+
+### The Logical OR Operator (||)
+- As mentioned earlier, the logical OR operator yields 1 (logically true) if one or both of the expressions evaluates to a nonzero value. The || operator yields 0 if (and only if) both expressions yield 0.
+
+A general format of the logical OR operator is:
+*exp1 || exp2*
+
+where exp1 and exp2 are two operand expressions evaluated by the OR operator.
+
+### The Logical NEGATION Operator (!)
+The general format of using the logical NEGATION operator is:
+
+*!expression*
+
+where expression is the operand of the NEGATION operator.
+
+## Manipulating Bits
+In previous hours, you learned that computer data and files are made of bits. In this section,you’ll learn about a set of operators that enable you to access and manipulate specific bits. But before we go further, let us learn more about binary and hex numbers, and how to convert a decimal number to its binary or hex representation.
+
+Let’s see how to convert a decimal number into a binary or a hex number, or vice versa. As you know, binary is a 2-based numbering system. Each digit in a binary number is called a bit and can be 1 or 0. If the position of a bit in a binary number is n, the bit can have a value of either 0 or 2 to the power of n. The position of a bit in a binary number is counted from the right of the binary number. The rightmost bit is at the position of zero.
+
+Thus, given a binary number 1000 (its hex value is 8), we can calculate its decimal value like this:
+1000 → 1 * 23 + 0 * 22 + 0 * 21 + 0 * 20 → 23 → 8 (decimal)
+That is, the decimal value of the binary number 1000 is 8.
+
+Similarly, given a binary number 1110, its hex value is E, you can calculate its decimal value like this:
+
+1110 → 1 * 23 + 1 * 22 + 1 * 21 + 0 * 20 → 23 → 14 (decimal)
+In other words, the decimal value of the binary number 1110 is 14.
+
+If you want to convert a decimal number, for example 10, to its binary counterpart, you have the following process:
+
+10 → 23 + 21 → 1 * 23 + 0 * 22 + 1 * 21 + 0 * 20 → 1010 (binary) or A (hex)
+Likewise, you can convert the rest of decimal numbers in Table 8.4 to their binary counterparts, or vice versa.
+
+###Using Bitwise Operators
+There are six bit-manipulation operators in the C language:
+
+**Operator Description**
+& | The bitwise AND operator
+| | The bitwise OR operator
+^ | The bitwise exclusive OR (XOR) operator
+~ | The bitwise complement operator
+>>| The right-shift operator
+<<| The left-shift operator
+
+This section and the next one give explanations and examples of the bit-manipulation
+operators.
+The general forms of the bitwise operators are as follows:
+x & y
+x | y
+x ^ y
+-x
+
+Here x and y are operands.
+
+The & operator compares each bit of x to the corresponding bit in y. If both bits are 1, 1 is placed at the same position of the bit in the result. If one or both of the bits is 0, 0 is placed in the result.
+
+For instance, the expression with two binary operands, 01 & 11, yields 01.
+
+The | operator places 1 in the result if either operand is 1. For example, the expression 01 | 11 yields 11. The | operator yields a 0 bit if — and only if — both operand bits are 0.
+
+The ^ operator places 1 in the result if exactly one operand, but not both, is 1. Therefore, the expression 01 ^ 11 yields 10.
+
+Finally, the ~ operator takes just one operand. This operator reverses each bit in the operand. For instance, ~01 gives 10.
+Table 8.5 shows more examples of using the bitwise operators in decimal, hex, and binary formats (in the left three columns). The corresponding results, in binary, hex, and decimal formats, are listed in the right three columns. The hex numbers are prefixed with 0x.
+
+## Using Shift Operators
+- There are two shift operators in C. The >> operator shifts the bits of an operand to the right; the << operator shifts the bits to the left.
+
+The general forms of the two shift operators are
+
+*x >> y*
+*x << y*
+
+Here x is an operand that is going to be shifted. y contains the specified number of places to shift.
+
+For instance, the expression 8 >> 2 tells the computer to shift the operand 8 to the right 2 bits, which yields the number 2 in decimal. The following:
+
+8 >> 2 which is equivalent to (1 * 23 + 0 * 22 + 0 * 21 + 0 * 20) >> 2
+produces the following:
+
+(0 * 23 + 0 * 22 + 1 * 21 + 0 * 20) which is equivalent to 0010 (in the binary format) or 2 (in the decimal format).
+
+*Tip*
+The operation of the shift-right operator (>>) is equivalent to dividing by powers of two. In other words, the following:
+x >> y
+is equivalent to the following:
+x / 2
+
+Here x is a non-negative integer.
+On the other hand, shifting to the left is equivalent to multiplying by powers of two; that is,
+x << y
+is equivalent to
+x * 2
+
+## What Does x?y:z Mean?
+- The operator ?: is called the conditional operator, which is the only operator that takes three operands. The general form of the conditional operator is
+
+*x ? y : z*
+
+Here x, y, and z are three operand expressions. Among them, x contains the test condition, and y and z represent the two possible final values of the expression. If x evaluates to nonzero (logically true), then y is chosen; otherwise, z is the result yielded by the conditional
+expression. The conditional operator is used as a kind of shorthand for an if statement.
+
+For instance, the expression
+*x > 0 ? ‘T’ : ‘F’*
+
+evaluates to ‘T’ if the value of x is greater than 0. Otherwise, the conditional expression evaluates to the value ‘F’.

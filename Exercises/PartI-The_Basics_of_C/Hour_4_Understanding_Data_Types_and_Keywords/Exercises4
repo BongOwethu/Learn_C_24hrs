@@ -1,0 +1,66 @@
+1. Write a program that prints out the numeric values of characters Z and z.
+*Answer*
+#include <stdio.h>
+int main()
+{
+    char c1;
+    char c2;
+
+    c1 = 'z';
+    c2 = 'Z';
+    printf("The numeric value for Z is %d.\n", c1);
+    printf("The numeric value of z is %d.\n", c2;
+	return 0;
+}
+
+2. Given two numeric values, 72 and 104, write a program to print out the corresponding two characters.
+*Answer*
+#include <stdio.h>
+main()
+{
+    char c1;
+    char c2;
+
+    c1 = 104;
+    c2 = 72;
+
+    printf("The character for 104 is %c.\n", c1);
+    printf("The character for 72 is %c.\n", c2);
+	return 0;
+}
+
+3. For a 16-bit integer variable, can you assign the variable with an integer value of 72368?
+*Answer*
+
+No. 72368 is beyond the range of the int data type of 16 bits. If you assign a value
+that is too large for the data type, the resulting value will wrap around and the
+result will be incorrect.
+
+4. Given the declaration double dbl_num = 123.456;, write a program that prints out the value of dbl_num in both floating-point and scientific notation formats.
+*Answer*
+#include <stdio.h>
+int main()
+{
+    double dbl_num;
+    dbl_num = 123.456;
+
+    printf("Value of dbl_num in floating-point is %f.\n", dbl_num);
+    printf("Value of dbl_num in scientific notation is %e.\n", dbl_num);
+	return 0;
+}
+
+5. Write a program that can print out the numeric value of the newline character (\n).
+
+(Hint: assign ‘\n’ to a character variable.)
+*Answer*
+#include <stdio.h>
+int main()
+{
+    char ch;
+	
+	ch = '\n';
+
+    printf("The numeric value for newline is %d.\n", ch);
+	return 0;
+
+}

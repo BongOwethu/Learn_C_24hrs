@@ -1,0 +1,103 @@
+# **The Basics of a C Program**
+
+As a building is made of bricks, a C program is made of basic elements, such as expressions, statements, statement blocks, and function blocks. These elements are discussed in the following sections. But first, you need to learn two smaller but important elements,constant and variable, which make up expressions.
+
+## Constants and Variables
+- As its name implies, a constant is a value that never changes. A variable, on the other hand, can be used to present different values.
+
+You can think of a constant as a music CD-ROM; the music saved in the CD-ROM is never changed. A variable is more like an audio cassette: You can always update the contents of the cassette by simply overwriting the old songs with new ones.
+You can see many examples in which constants and variables are in the same statement.
+For instance, consider the following:
+i = 1;
+
+## Expressions
+- An expression is a combination of constants, variables, and operators that are used to denote computations.
+For instance, the following:
+(2 + 3) * 10
+
+## Operators
+As you’ve seen, an expression can contain symbols such as `+`,,`-` `*`, `%` and `/`. In the C language, these symbols are called arithmetic operators.
+
++ Addition
+- Subtraction
+* Multiplication
+/ Division
+% Remainder (or modulus)
+
+BODMAS- Brackets of Divistion, Multiplication,Addtionation ans Subtraction. This is the order by which each operator is eveuated in an arthemetic operator.
+
+## Identifiers
+Along with numbers (such as the constant 7) and operators (such as the symbol +),
+expressions can also contain words that are called identifiers. Function names (such as
+exit) and variable names (such as i), as well as reserved keywords, are all identifiers
+in C.
+The following is the set of characters you can use to make a valid identifier. Any characters
+or symbols that do not follow these rules are illegal to use in an identifier.
+• Characters A through Z and a through z.
+• Digit characters 0 through 9 (but these can not be used as the first character of an
+identifier).
+• The underscore character (_).
+For instance, stop_sign, Loop3, and _pause are all valid identifiers.
+The following are illegal characters; that is, they do not meet the above set of rules for
+identifiers:
+• C arithmetic signs (`+`, `-`, `*`, `/`).
+• Period, or dot character (`.`).
+• Apostrophes (`‘`) or quotes (`“`).
+• Any other special symbols such as `*`, `@`, `#`, `?`, and so on.
+Some invalid identifiers, for example, are 4flags, sum-result, method*4, andwhat_size?.  
+
+*Tip:* Never use the reserved keywords, or the names of the standard C library functions, for variable names or function names that you create in your own C programs.
+
+## Statements
+In the C language, a statement is a complete instruction, ending with a semicolon. In many cases, you can turn an expression into a statement by simply adding a semicolon at the end of the expression.
+For instance, the following:
+i = 1;
+is a statement. You might have already figured out that the statement consists of an expression of i = 1 and a semicolon (;).
+Here are some other examples of statements:
+i = (2 + 3) * 10;
+i = 2 + 3 * 10;
+j = 6 % 4;
+k = i + j;
+Also, in the first lesson of this book you learned statements such as
+return 0;
+exit(0);
+printf (“Howdy, neighbor! This is my first C program.\n”);
+
+## Statement Blocks
+A group of statements can form a statement block that starts with an opening brace ({)
+and ends with a closing brace (}). A statement block is treated as a single statement by
+the C compiler.
+For instance, the following:
+for(. . .) {
+s3 = s1 + s2;
+mul = s3 * c;
+remainder = sum % c;
+}
+
+# Anatomy of a C Function
+
+## Determining a Function’s Type
+- The function type is used to signify what type of value a function is going to return after its execution.
+In Hour 2 for instance, you learned that the default function type of main() is int.
+In C, int is used as the keyword for the integer data type. In the next hour, you’ll learn more about data types. 
+
+## Giving a Function a Valid Name
+A function name is normally given in such a way that it reflects what the function can
+do. For instance, the name of the printf() function means “print formatted data.”
+Since a function name is an identifier, when creating your own functions you must follow the rules for creating valid identifiers when naming your function.
+In addition, you cannot use the names of standard C functions such as printf() or exit() to name your own functions. They are already defined, and it is illegal to use the same function name in defining more than one function.
+
+## Passing Arguments to C Functions
+Functions are useful because you can call them over and over from different points in your program. However it’s likely that you call a certain function for a slightly different
+reason each time.
+
+ - Pieces of information passed to functions are known as arguments. As you’ve seen, the argument of a function is placed between the parentheses that immediately follow the function name.
+
+The number of arguments to a function is determined by the declaration of the function, which in turn is determined by the task the function is going to perform. If a function needs more than one argument, arguments passed to the function must be separated by commas; these arguments are considered an argument list.
+
+## The Beginning and End of a Function
+As you might have already figured out, braces are used to mark the beginning and end of a function. The opening brace ({) signifies the start of a function body, whereas the closing brace (}) marks the end of the function body.
+
+## The Function Body
+The function body in a function is the place that contains variable declarations and other C statements. The task of a function is accomplished by executing the statements inside the function body one at a time.
+It is important to remember that any variable declarations must be placed at the beginning of the function body. It is illegal to put variable declarations anywhere other than the very beginning of a statement block.
