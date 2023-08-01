@@ -69,6 +69,6 @@ hour: fopen(), fclose(), fgetc(), fputc(), fgets(), fputs(), fread(), fwrite(), 
 - *Hour 24, “Where Do You Go from Here?,”* summarizes the important concepts and features introduced in this book. In addition, programming style, modular programming, and debugging are explained briefly. A list of recommended C books is provided for your further reading.
 
 
-:[smile]: Now, you’re ready to start the journey of learning the C language, as the world has moved into a new millennium. Have a fun in reading this book, and enjoy programming in C!
+- Now, you’re ready to start the journey of learning the C language, as the world has moved into a new millennium. Have a fun in reading this book, and enjoy programming in C!
 
 **Tony Zhang**
