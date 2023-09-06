@@ -1,3 +1,4 @@
+![github_cover_banner]()
 # **Teach Yourself C in 24 Hours by Tony Zhang**
 
 *If one learns from others but does not think, one will be bewildered;*
