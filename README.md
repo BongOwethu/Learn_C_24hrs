@@ -1,4 +1,4 @@
-![github_cover_banner]()
+![github_cover_banner](https://github.com/BongOwethu/Learn_C_24hrs/blob/main/Teach%20Yourself%20C%20in%2024%20Hours%20by%20Tony%20Zhang.jpg)
 # **Teach Yourself C in 24 Hours by Tony Zhang**
 
 *If one learns from others but does not think, one will be bewildered;*
